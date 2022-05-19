@@ -74,11 +74,12 @@ class _TodoListState extends State<TodoList> {
     });
   }
 
-// change state of todo
+// change checked state of todo
   void handleTodoChange(Todo todo) {
     setState(() {
       todo.checked = !todo.checked;
     });
+    setDataToSharedPreference(_todos);
   }
 
 //  add todo item
